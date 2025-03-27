@@ -1,4 +1,4 @@
-package com.jailton.androidapptemplate.ui.login
+package com.amanda.vivaActive.ui.login
 
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -12,9 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.jailton.androidapptemplate.MainActivity
-import com.jailton.androidapptemplate.R
-import com.jailton.androidapptemplate.ui.usuario.CadastroUsuarioActivity
+import com.amanda.vivaActive.MainActivity
+import com.amanda.vivaActive.R
+import com.amanda.vivaActive.ui.usuario.CadastroUsuarioActivity
 
 class LoginActivity : AppCompatActivity() {
 

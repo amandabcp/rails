@@ -1,4 +1,4 @@
-package com.jailton.androidapptemplate
+package com.amanda.vivaActive
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.jailton.androidapptemplate.ui.login
+package com.amanda.vivaActive.ui.login
 
 import androidx.lifecycle.ViewModel
 
