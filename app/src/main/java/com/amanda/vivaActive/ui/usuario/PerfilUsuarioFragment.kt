@@ -1,4 +1,4 @@
-package com.jailton.androidapptemplate.ui.usuario
+package  com.amanda.vivaActive.ui.usuario
 
 import android.os.Bundle
 import android.util.Log
@@ -19,9 +19,9 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.jailton.androidapptemplate.R
-import com.jailton.androidapptemplate.baseclasses.Usuario
-import com.jailton.androidapptemplate.databinding.FragmentPerfilUsuarioBinding
+import com.amanda.vivaActive.R
+import com.amanda.vivaActive.baseclasses.Usuario
+import com.amanda.vivaActive.databinding.FragmentPerfilUsuarioBinding
 
 class PerfilUsuarioFragment : Fragment() {
 
@@ -31,6 +31,7 @@ class PerfilUsuarioFragment : Fragment() {
     private lateinit var registerNameEditText: EditText
     private lateinit var registerEmailEditText: EditText
     private lateinit var registerEnderecoEditText: EditText
+    private lateinit var registerIdadeEditText: EditText
     private lateinit var registerPasswordEditText: EditText
     private lateinit var registerConfirmPasswordEditText: EditText
     private lateinit var registerButton: Button
@@ -56,6 +57,7 @@ class PerfilUsuarioFragment : Fragment() {
         registerNameEditText = view.findViewById(R.id.registerNameEditText)
         registerEmailEditText = view.findViewById(R.id.registerEmailEditText)
         registerEnderecoEditText = view.findViewById(R.id.registerEnderecoEditText)
+        registerIdadeEditText = view.findViewById(R.id.registerIdadeEditText)
         registerPasswordEditText = view.findViewById(R.id.registerPasswordEditText)
         registerConfirmPasswordEditText = view.findViewById(R.id.registerConfirmPasswordEditText)
         registerButton = view.findViewById(R.id.registerButton)
@@ -131,6 +133,7 @@ class PerfilUsuarioFragment : Fragment() {
                     val usuario = snapshot.getValue(Usuario::class.java)
                     usuario?.let {
                         registerEnderecoEditText.setText(it.endereco ?: "")
+                        registerIdadeEditText.setText(it.idade ?: "")
                     }
                 }
             }
@@ -144,6 +147,7 @@ class PerfilUsuarioFragment : Fragment() {
     private fun updateUser() {
         val name = registerNameEditText.text.toString().trim()
         val endereco = registerEnderecoEditText.text.toString().trim()
+        val idade = registerIdadeEditText.text.toString().trim()
 
         // Acessar currentUser
         val user = auth.currentUser
@@ -151,18 +155,18 @@ class PerfilUsuarioFragment : Fragment() {
         // Verifica se o usuário atual já está definido
         if (user != null) {
             // Se o usuário já existe, atualiza os dados
-            updateProfile(user, name, endereco)
+            updateProfile(user, name, endereco, idade)
         } else {
             Toast.makeText(context, "Não foi possível encontrar o usuário logado", Toast.LENGTH_SHORT).show()
         }
     }
 
-    private fun updateProfile(user: FirebaseUser?, displayName: String, endereco: String) {
+    private fun updateProfile(user: FirebaseUser?, displayName: String, endereco: String, idade: String) {
         val profileUpdates = UserProfileChangeRequest.Builder()
             .setDisplayName(displayName)
             .build()
 
-        val usuario = Usuario(user?.uid.toString() , displayName, user?.email, endereco, )
+        val usuario = Usuario(user?.uid.toString() , displayName, user?.email, endereco, idade )
 
         user?.updateProfile(profileUpdates)
             ?.addOnCompleteListener { task ->

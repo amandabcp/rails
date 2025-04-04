@@ -40,6 +40,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/userProfileImageView"/>
+    <EditText
+        android:id="@+id/registerIdadeEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Idade"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/registerNameEditText"/>
 
     <EditText
         android:id="@+id/registerEmailEditText"
@@ -47,7 +56,7 @@
         android:layout_height="wrap_content"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        app:layout_constraintTop_toBottomOf="@id/registerNameEditText"
+        app:layout_constraintTop_toBottomOf="@id/registerIdadeEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -59,7 +68,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registerEmailEditText" />
-
+'
     <EditText
         android:id="@+id/registerPasswordEditText"
         android:layout_width="0dp"
