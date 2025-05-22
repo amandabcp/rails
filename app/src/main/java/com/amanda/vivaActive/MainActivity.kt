@@ -1,4 +1,4 @@
-package com.amanda.vivaActive
+package com.jailton.androidapptemplate
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,7 +7,8 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.amanda.vivaActive.databinding.ActivityMainBinding
+
+import com.jailton.androidapptemplate.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
