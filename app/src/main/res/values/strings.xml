@@ -3,6 +3,15 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_profile">Profile</string>
-
     <string name="title_itens">Itens</string>
+    <string name="atualizacao_de_usuario">Atualização de Usuário</string>
+    <string name="foto_de_perfil">Foto de perfil</string>
+    <string name="digite_aqui_o_nome">Digite aqui o Nome</string>
+    <string name="idade">Idade</string>
+    <string name="email">Email</string>
+    <string name="endereco">Endereço</string>
+    <string name="senha">Senha</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="atualizar">Atualizar</string>
+    <string name="sair">Sair</string>
 </resources>
