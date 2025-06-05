@@ -1,4 +1,4 @@
-package com.jailton.androidapptemplate.ui.firebase
+package com.amanda.vivaActive.ui.firebase
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -11,8 +11,8 @@ import android.widget.RemoteViews
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.jailton.androidapptemplate.MainActivity
-import com.jailton.androidapptemplate.R
+import com.amanda.vivaActive.MainActivity
+import com.amanda.vivaActive.R
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
